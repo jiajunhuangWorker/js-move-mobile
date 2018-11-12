@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minmun-scale=1.0,maxmun-scale=1.0,user-scale=no"/>
+<title>通过jQuery Mobile实现各种触屏事件</title>
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.2/jquery.mobile.min.css">
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.2/jquery.mobile.min.js"></script>
+<style>
+body{ font-family:"Microsoft YaHei"}
+#title{ width:100%; height:50px; line-height:50px; font-size:24px; text-align:center; font-weight:bold; margin:25px 0px;}
+#con{ width:80%; height:100px; padding:50px 0px; text-align:center; line-height:30px; margin:0px 10%; background:#0cc; color:#fff; font-size:16px;}
+</style>
+</head>
+
+<body id="pageone" data-role="page">
+<div id="title">触屏点击</div>
+<div id="con" class="con1">触摸事件在用户触摸屏幕（页面）时触发。</div>
+<div id="title">触屏长按</div>
+<div id="con" class="con2">点击不放（长按） 事件在点击并不放（大约一秒）后触发。</div>
+<div id="title">触屏滑动</div>
+<div id="con" class="con3">滑动事件是在用户一秒内水平拖拽大于30PX，或者纵向拖曳小于20px的事件发生时触发的事件。</div>
+<div id="title">触屏向左滑动</div>
+<div id="con" class="con4">向左滑动事件在用户向左拖动元素大于30px时触发。</div>
+<div id="title">触屏向右滑动</div>
+<div id="con" class="con5">向右滑动事件在用户向右拖动元素大于30px时触发。</div>
+</body>
+</html>
+<script>
+$(document).on("pageinit","#pageone",function(){
+	$(".con1").on("tap",function(){
+		alert("点击事件")		  
+	})
+	$(".con2").on("taphold",function(){
+		alert("点击不放")		  
+	})
+	$(".con3").on("swipe",function(){
+		alert("滑动事件")		  
+	})
+	$(".con4").on("swipeleft",function(){
+		alert("向左滑动事件")		  
+	})
+	$(".con5").on("swiperight",function(){
+		alert("向右滑动事件")		  
+	})
+	       
+});
+</script>
