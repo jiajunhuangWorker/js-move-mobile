@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta name="viewport"  content="width=device-width,user-scalable=no">
+	<meta name="copyright" content="Copyright (c) TouchSlide 大话主席 2013">
+	<meta name="Keywords" content="TouchSlide, javascript触屏滑动特效插件, 移动终端滑动特效,触屏图片滑动, 触屏Tab切换,触屏多图切换等">
+	<meta name="description" content="TouchSlide, javascript触屏滑动特效插件, 移动终端滑动特效,触屏图片滑动, 触屏Tab切换,触屏多图切换等">
+	<title>TouchSlide 2.2多图滑动 触屏滑动特效插件 大话主席 </title>
+</head>
+
+
+
+<script src="../TouchSlide.1.1.js"></script>
+<!-- 若想了解更详细使用方法，请访问 http://www.superslide2.com/touchSlide/ -->
+
+
+
+<body>
+	
+
+	
+			
+			<!-- 本例主要代码 Start ================================ -->
+			<div id="picScroll" class="picScroll">
+				<div class="hd">
+						<span class="next"></span>
+						<ul></ul>
+						<span class="prev"></span>
+						<h3>多图滑动</h3>
+				</div>
+				<div class="bd">
+						<ul>
+							<li><a href="#"><img _src="images/book1.jpg" src="images/blank.png" /></a></li>
+							<li><a href="#"><img _src="images/book2.jpg" src="images/blank.png" /></a></li>
+							<li><a href="#"><img _src="images/book3.jpg" src="images/blank.png" /></a></li>
+						</ul>
+
+						<ul>
+							<li><a href="#"><img _src="images/book4.jpg" src="images/blank.png" /></a></li>
+							<li><a href="#"><img _src="images/book5.jpg" src="images/blank.png" /></a></li>
+							<li><a href="#"><img _src="images/book6.jpg" src="images/blank.png" /></a></li>
+						</ul>
+
+						<ul>
+							<li><a href="#"><img _src="images/book7.jpg" src="images/blank.png" /></a></li>
+							<li><a href="#"><img _src="images/book8.jpg" src="images/blank.png" /></a></li>
+							<li><a href="#"><img _src="images/book9.jpg" src="images/blank.png" /></a></li>
+						</ul>
+
+				</div>
+		
+			<script type="text/javascript">
+				TouchSlide({ 
+					slideCell:"#picScroll",
+					// titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+					// autoPage:true, //自动分页
+					pnLoop:"false", // 前后按钮不循环
+					switchLoad:"_src" //切换加载，真实图片路径为"_src" 
+				});
+			</script>
+			<!-- 本例主要代码 End ================================ -->
+
+
+			
